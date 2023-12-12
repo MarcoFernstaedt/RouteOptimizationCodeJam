@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API App with Selection Sidebar</title>
+    <link rel="stylesheet" href="./styles/style.css"
+  </head>
+  <body>
+    <div id="sidebar" class="sidebar">
+      <h2>Select Item</h2>
+      <select id="itemSelect" onchange="loadData()">
+        <option value="users">Users</option>
+        <option value="posts">Posts</option>
+        <option value="comments">Comments</option>
+      </select>
+    </div>
+    <div id="content" class="content">
+      <h2>API Data</h2>
+      <ul id="dataList" class="data__list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
