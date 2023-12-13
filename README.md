@@ -1,6 +1,10 @@
 # RouteOptimizationCodeJam
 Contributors:  Marco Fernstaedt, Veronica Steele, Andrew Kwon
 
+# Roles:
+- Marco Fernstaedt 
+    - Back-end Developer
+
 # Introduction
 In this project, our team designed a delivery route application where users can select a start location and several destinations cities. The application applies various methods for solving/estimating a small scale adaptation of the traveling salesman problem, or shortest Hamiltonian cycle. The following algorithms were used for comparative analysis:
 - Random Hamiltonian cycle (baseline)
