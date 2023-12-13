@@ -4,24 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Route Optimization</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" src="./styles/style.css" />
   </head>
   <body>
+    <header class="header">
+      <button class="selector-button" type="button">
+        Select a Destination
+      </button>
+    </header>
     <main class="main">
-      <div id="sidebar" class="sidebar">
-        <h2>Select Item</h2>
-        <select id="itemSelect" onchange="loadData()">
-          <option value="users">Users</option>
-          <option value="posts">Posts</option>
-          <option value="comments">Comments</option>
-        </select>
-      </div>
-      <div id="content" class="content">
+      <div class="content">
+        <ul class="sidebar">
+          <li>Sample 1</li>
+          <li>Sample 2</li>
+          <li>Sample 3</li>
+          <li>Sample 4</li>
+          <li>Sample 5</li>
+          <li>Sample 6</li>
+          <li>Sample 7</li>
+        </ul>
         <h2>API Data</h2>
+        <iframe
+          class="iframe"
+          width="500"
+          height="400"
+          src="https://www.google.com/maps?z=15&amp;daddr=48.858372,2.294481&amp;output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="80"
+          marginwidth="80"
+        ></iframe>
         <ul id="dataList" class="data__list"></ul>
       </div>
     </main>
     <footer class="footer">Copyright Santa's Coders</footer>
-    <script src="app.js"></script>
+    <script src="./pages/index.js"></script>
   </body>
 </html>
