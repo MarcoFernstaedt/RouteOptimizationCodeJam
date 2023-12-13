@@ -21,6 +21,7 @@ class Locations:
     # ex: '\datasets\cities_final.csv'
     def __init__(self, filepath: str):
         self.cities = pd.read_csv(filepath)
+        self.all_coords = self.get_all_coords()
 
     # Function: get_all_cities()
     # Parameters:
@@ -39,6 +40,17 @@ class Locations:
     def get_city_data(self, src: str, city_list: list):
         cities = [src] + city_list
         return self.cities.query('City in @cities')
+    
+    # Function: get_all_coords()
+    # Parameters:
+    #   None
+    # Returns:
+    #   Dictionary object of all city names and their location in latitude/longitude (tuple)
+    def get_all_coords(self):
+        all_coords = {}
+        for index, row in self.cities.iterrows():
+            all_coords[row['City']] = (row['Latitude'], row['Longitude'])
+        return all_coords
 
     # Function: create_map(src, city_list)
     # Parameters:
