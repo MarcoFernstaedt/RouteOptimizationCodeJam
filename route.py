@@ -69,6 +69,7 @@ class Locations:
         coords = {}
         for i in range(num_cities):
             city_a = df_cities.iloc[i]
+            weights[(city_a['City'], city_a['City'])] = 0
             edges[city_a['City']] = []
             coords[city_a['City']] = (city_a['Latitude'], city_a['Longitude'])
             for j in range(num_cities):
@@ -156,23 +157,6 @@ class Route:
         calc_time = t1 - t0
         return route, cost, calc_time
 
-    # Function: swap_edges(route, v, u)
-    # Parameters:  
-    #   route: Current route to be optimized
-    #   v: First node to be swapped in new route
-    #   u: Second node to be swapped in new route
-    # Returns:
-    #   new_route: New route with 2-opt swapped nodes (dtype list)
-    def swap_edges(self, route, v, u):
-        new_route = []
-        for i in range(v+1):
-            new_route.append(route[i])
-        for j in range(u, v, -1):
-            new_route.append(route[j])
-        for k in range(u+1, len(route)):
-            new_route.append(route[k])
-        return new_route
-
     # Function: get_2_opt_rte(route)
     # Parameters:  
     #   route: Input route, arbitrarily generated
@@ -180,7 +164,7 @@ class Route:
     #   route: Heuristically generated route using 2-opt swapping (dtype list)
     #   cost: The tour cost for the route in nautical miles (dtype float)
     #   calc_time: The algorithms process time (sum of system and CPU time) in nanoseconds (dtype float)
-    def get_2_opt_rte(self, route: list):
+    def get_2opt_rte(self, route: list):
         t0 = time.process_time_ns()
         curr_route = route
         best_distance = self.get_route_cost(curr_route)
@@ -188,8 +172,10 @@ class Route:
         while can_improve:
             can_improve = False
             for i in range(1, len(route)-2):
-                for j in range(i+1, len(route)-1):
-                    new_route = self.swap_edges(curr_route, i, j)
+                for j in range(i+1, len(route)):
+                    if j-i == 1: continue
+                    new_route = curr_route[:]
+                    new_route[i:j] = curr_route[j-1:i-1:-1]
                     new_distance = self.get_route_cost(new_route)
                     if new_distance < best_distance:
                         curr_route = new_route

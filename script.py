@@ -14,7 +14,6 @@ except:
     print('Error: invalid filename or JSON format')
 
 cities = Locations('datasets\cities_final.csv')
-all_coords = cities.get_all_coords()
 edges, weights, coords = cities.create_map(home, city_list)
 route = Route(home, city_list, edges, weights)
 
@@ -28,12 +27,12 @@ for algo in algo_list:
     elif algo == 'Exact':
         rte, dist, calc_time = route.get_exact_rte()
     elif algo == 'Hueristic':
-        rte, dist, calc_time = route.get_2_opt_rte()
+        rte, dist, calc_time = route.get_2opt_rte()
     else:
         break
     rte_dict = {}
     for city in rte:
-        rte_dict[city] = all_coords[city]
+        rte_dict[city] = coords[city]
     res = {'Route': rte_dict,
            'Distance': dist,
            'Runtime': calc_time}
