@@ -3,19 +3,22 @@
   margin: 0;
   padding: 0;
   display: flex;
+  width: 100%;
 }
 
 .sidebar {
   width: 200px;
-  background-color: #f1f1f1;
-  padding: 20px;
+  height: 150px;
   background-color: red;
+  position: fixed;
+  text-align: center;
 }
 
 .content {
-  flex: 1;
-  padding: 20px;
+  padding-left: 250px;
   background-color: green;
+  height: 400px;
+  text-align: center;
 }
 
 .select {
@@ -35,4 +38,6 @@
 
 .footer {
   background-color: cornsilk;
+  height: 150px;
+  text-align: center;
 }
