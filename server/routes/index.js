@@ -1,7 +1,9 @@
 const router = requrie("express").Router();
+const submitFormRoutes = require("./submitForm");
+const { NOT_FOUND } = require("../utils/errors");
 
 // handles post request from form
-router.post('/submit-form', submitFormController)
+router.use("/submit-form", submitFormRoutes);
 
 // Catch-all non-existant routes.
 router.use("*", (req, res) => {
