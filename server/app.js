@@ -3,7 +3,7 @@ const helmet = require("helmet");
 
 const app = express();
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3001 } = process.env;
 
 // middleware to parse json request
 app.use(express.json());
