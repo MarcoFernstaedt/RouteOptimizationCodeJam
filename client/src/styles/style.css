@@ -6,18 +6,24 @@
   width: 100%;
 }
 
+.header {
+  background-color: green;
+}
+
+.main {
+  background-color: antiquewhite;
+}
+
+.content {
+  background-color: green;
+  height: 400px;
+  text-align: center;
+}
 .sidebar {
   width: 200px;
   height: 150px;
   background-color: red;
-  position: fixed;
-  text-align: center;
-}
-
-.content {
-  padding-left: 250px;
-  background-color: green;
-  height: 400px;
+  position: relative;
   text-align: center;
 }
 
