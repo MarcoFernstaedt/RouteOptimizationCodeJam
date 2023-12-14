@@ -1,13 +1,16 @@
-const express = require('express');
-const helmet = require('helmet');
+const express = require("express");
+const helmet = require("helmet");
 
-const app = express()
+const app = express();
 
-const { PORT = 3000 } = process.env
+const { PORT = 3000 } = process.env;
+
+// middleware to parse json request
+app.use(express.json());
 
 // security measure
-app.use(helmet())
+app.use(helmet());
 
 app.listen(() => {
-    console.log(`Listening to port: ${PORT}`)
-})
+  console.log(`Listening to port: ${PORT}`);
+});
