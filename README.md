@@ -49,6 +49,7 @@ The required libraries are contained in the route.py module, and are as follows:
 - Node.js
 - Express.js
 - Helmet (Securit Measurey)
+- Python
 
 ### Server Structure
 - **app.js**: Express server and middleware handling routes.
