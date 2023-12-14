@@ -2,6 +2,7 @@ const selectorButton = document.querySelector(".selector-button");
 selectorButton.addEventListener("click", () => {
   console.log("button has been clicked");
 });
+
 function loadData() {
   const selectedValue = document.getElementById("itemSelect").value;
   const apiUrl = `https://jsonplaceholder.typicode.com/${selectedValue}`;
