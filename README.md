@@ -68,3 +68,5 @@ Consider installing Helmet for security measures.
 
 - [GitHub - Marco Fernstaedt](https://github.com/MarcoFernstaedt)
 - [LinkedIn - Marco Fernstaedt](https://www.linkedin.com/in/marco-f-19a372219?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtABxipo9S0iGUo9Hp968eA%3D%3D)
+- [GitHub - Andrew Kwon](https://github.com/adkwn1)
+- [LinkedIn - Andrew Kwon](https://www.linkedin.com/in/andrew-kwon-913849261/)
