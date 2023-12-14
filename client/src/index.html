@@ -35,38 +35,38 @@
           marginwidth="80"
         ></iframe>
 
-        <div class="modal">
-          <div class="modal__container">
-            <button
-              class="modal__close"
-              id="modal-close-button"
-              type="button"
-            ></button>
-            <h2 class="modal__heading"></h2>
-            <form class="modal__form" id="city-selector-form" novalidate>
-              <label class="modal__label">
-                <input
-                  type="text"
-                  name="title"
-                  class="modal__input"
-                  placeholder="City"
-                  id="title-input"
-                  minlength="2"
-                  maxlength="40"
-                  required
-                />
-                <span class="modal__error" id="title-input-error"></span>
-              </label>
-                <span
-                  class="modal__error"
-                  id="profile-description-error"
-                ></span>
-              </label>
-              <button class="modal__button" type="submit">Save</button>
-            </form>
+        <div class="modal" id="citySelector">
+          <div>
+            <span class="closeButton" onclick="closeCitySelector()"
+              >&times;</span
+            >
+            <h2>Select Cities</h2>
+
+            <label for="homeCity">Home City:</label>
+            <select id="homeCity">
+              <!-- Populate with city options -->
+              <option value="city1">City 1</option>
+              <option value="city2">City 2</option>
+              <!-- Add more options as needed -->
+            </select>
+
+            <br />
+
+            <label for="otherCities">Other Cities (up to 6):</label>
+            <select id="otherCities" multiple size="7">
+              <!-- Populate with city options -->
+              <option value="city3">City 3</option>
+              <option value="city4">City 4</option>
+              <!-- Add more options as needed -->
+            </select>
+
+            <br /><br />
+
+            <button onclick="submitSelection()">Submit</button>
           </div>
-          <div class="modal__overlay"></div>
         </div>
+
+        <button onclick="openCitySelector()">Open City Selector</button>
 
         <ul id="dataList" class="data__list"></ul>
       </div>

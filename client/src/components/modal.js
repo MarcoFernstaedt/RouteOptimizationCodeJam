@@ -1,31 +1,50 @@
-export default class Popup {
-  constructor(popupSelector) {
-    this._popupElement = document.querySelector(popupSelector);
+export class Modal {
+  constructor() {
+    this.modalElement = document.getElementById("citySelector");
+    this.openButton = document.getElementById("openCitySelectorButton");
+    this.homeCitySelect = document.getElementById("homeCity");
+    this.otherCitiesSelect = document.getElementById("otherCities");
+
+    // Bind methods to the instance to make 'this' refer to the class instance
+    this.open = this.open.bind(this);
+    this.close = this.close.bind(this);
+    this.closeOnEscape = this.closeOnEscape.bind(this);
+    this.submitSelection = this.submitSelection.bind(this);
+
+    // Attach event listeners
+    this.openButton.addEventListener("click", this.open);
+    this.modalElement
+      .querySelector(".closeButton")
+      .addEventListener("click", this.close);
   }
-  _handleEscClose = (evt) => {
-    if (evt.key === "Escape") {
-      this.closeModal();
+
+  open() {
+    this.modalElement.style.display = "flex";
+    document.addEventListener("keydown", this.closeOnEscape);
+  }
+
+  close() {
+    this.modalElement.style.display = "none";
+    document.removeEventListener("keydown", this.closeOnEscape);
+  }
+
+  closeOnEscape(event) {
+    if (event.key === "Escape") {
+      this.close();
     }
-  };
-
-  openModal() {
-    this._popupElement.classList.add("modal_opened");
-    document.addEventListener("keyup", this._handleEscClose);
   }
 
-  closeModal() {
-    this._popupElement.classList.remove("modal_opened");
-    document.removeEventListener("keyup", this._handleEscClose);
-  }
+  submitSelection() {
+    const homeCity = this.homeCitySelect.value;
+    const otherCities = Array.from(this.otherCitiesSelect.selectedOptions).map(
+      (option) => option.value
+    );
 
-  setEventListeners() {
-    this._popupElement.addEventListener("mousedown", (evt) => {
-      if (
-        evt.target.classList.contains("modal__overlay") ||
-        evt.target.classList.contains("modal__close")
-      ) {
-        this.closeModal();
-      }
-    });
+    // Perform actions with the selected values (you can replace this with your logic)
+    console.log("Home City:", homeCity);
+    console.log("Other Cities:", otherCities);
+
+    // Close the modal
+    this.close();
   }
 }

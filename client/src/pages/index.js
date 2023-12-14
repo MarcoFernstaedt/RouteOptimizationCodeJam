@@ -1,6 +1,6 @@
-import Popup from "../components/modal";
+import Modal from "../components/modal";
 
-const selectorModal = new Popup("#city-selector-form");
+const selectorModal = new Modal("#city-selector-form");
 
 const selectorButton = document.querySelector(".selector-button");
 selectorButton.addEventListener("click", () => {
