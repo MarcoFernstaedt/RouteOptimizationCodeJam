@@ -1,3 +1,7 @@
+import Popup from "../../components/modal";
+
+const selectorModal = new Popup("#city-selector-form");
+
 const selectorButton = document.querySelector(".selector-button");
 selectorButton.addEventListener("click", () => {
   console.log("button has been clicked");
