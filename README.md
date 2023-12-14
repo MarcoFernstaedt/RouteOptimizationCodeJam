@@ -53,18 +53,20 @@ The required libraries are contained in the route.py module, and are as follows:
 
 ### Server Structure
 - **app.js**: Express server and middleware handling routes.
+- **controllers**
+  - **submitForm.js** Controller for the `/submit-form` route.
 - **routes/**
   - **index.js**: Routes for various paths.
-  - **submit-form.js**: Controller for the `/submit-form` route.
+  - **submitForm.js**: Routes for various submit-form paths.
+- **utils**
+  - **errors.js**: Containes error status codes.
+  - **pythonRunner.js**: function to run python scripts.
 
 ### Controller
 - **submitForm.js**: Controller for the `/submit-form` route. Extracts user data and passes it to Python scripts. Python scripts return cities, distance, and algorithm runtime.
 
 ### Deployment
 This project will be deployed on AWS upon completion.
-
-### Security
-Consider installing Helmet for security measures.
 
 ### Connect with Us
 
