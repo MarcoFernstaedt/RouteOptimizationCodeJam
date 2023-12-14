@@ -1,4 +1,4 @@
-import Popup from "../../components/modal";
+import Popup from "../components/modal";
 
 const selectorModal = new Popup("#city-selector-form");
 
