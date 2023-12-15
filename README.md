@@ -29,7 +29,7 @@ The dataset was dervied from the 2020 US census report. The original dataset (*u
 ### Usage
 - **driver_nb.ipynb**: Jupyter notebook that demonstrates each graph traversal algorithm through the use of the route.py module. Includes simple EDA and visualization of each route.
 - **route.py**: Python module for creating Locations and Route objects. Locations are initialized with the dataset and store the information as a pandas DataFrame. Route objects can be instantiated from Locations object deliverables. See documentation comments contained in the file for amplifying remarks.
-- **script.py**: Python script for calculating user generated route queries. Takes a JSON-style string as a single command-line argument. The keys specify start city, a list of destination cities, and the desired algorithm name to use for route calculation. Results are printed to stdout in JSON format as a string, and can also be written to a JSON file (output.json) by un-commenting the appropriate code line.
+- **script.py**: Python script for calculating user generated route queries. Takes a JSON-style string as a single command-line argument. The keys specify start city, a list of destination cities, and the desired algorithm name to use for route calculation. Results are printed to stdout in JSON format as a string. Minor edits can be made to allow intake of a JSON file in the command line argument, as well as writting the output to a JSON file.
 
 ### Requirements
 The required libraries are contained in the route.py module, and are as follows:
