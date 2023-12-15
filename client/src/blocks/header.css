@@ -1,3 +1,9 @@
 .header {
   background-color: green;
 }
+.selector-button {
+}
+.selector-button:hover {
+  cursor: pointer;
+  background-color: gray;
+}

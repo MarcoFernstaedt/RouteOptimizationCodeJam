@@ -16,11 +16,18 @@
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .open__button {
   background-color: aliceblue;
 }
 .open__button:hover {
+  cursor: pointer;
+}
+
+.homecity__selector:hover {
   cursor: pointer;
 }
 
@@ -35,4 +42,27 @@
 
 .close__button:hover {
   cursor: pointer;
+}
+
+.submit__button {
+  background-color: antiquewhite;
+}
+
+.submit__button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 920px) {
+  .content {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .content,
+  .iframe {
+    width: 282px;
+    height: 322px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

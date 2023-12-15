@@ -12,8 +12,6 @@
         Select a Destination
       </button>
 
-      <button class="modal__open">Open City Selector</button>
-
       <ul id="dataList" class="data__list"></ul>
     </header>
     <main class="main">
@@ -35,7 +33,7 @@
             <h2>Select Cities</h2>
 
             <label for="homeCity">Home City:</label>
-            <select id="homeCity">
+            <select class="homecity__selector">
               <!-- Populate with city options -->
               <option value="city1">New York</option>
               <option value="city2">Los Angeles</option>
@@ -57,7 +55,9 @@
 
             <br /><br />
 
-            <button onclick="submitSelection()">Submit</button>
+            <button class="submit__button" onclick="submitSelection()">
+              Submit
+            </button>
           </div>
         </div>
       </div>
