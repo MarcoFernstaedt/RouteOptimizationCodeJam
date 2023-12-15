@@ -1,15 +1,16 @@
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: aliceblue;
   font-family: Arial, sans-serif;
   padding-bottom: 0;
   height: 125px;
 }
-.selector-button {
-  border-radius: 8px;
-}
-.selector-button:hover {
-  cursor: pointer;
-  background-color: gray;
+
+.header__title {
+  font-size: 41px;
+  line-height: 52px;
 }
 
 @media screen and (max-width: 630px) {

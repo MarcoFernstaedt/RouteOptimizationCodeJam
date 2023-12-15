@@ -1,33 +1,15 @@
 import "../pages/index.css";
-import Modal from "../components/modal";
 
-const selectorModal = new Modal("#city-selector-form");
+const form = document.querySelector('.form');
 
-const selectorButton = document.querySelector(".selector-button");
-selectorButton.addEventListener("click", () => {
-  console.log("button has been clicked");
-});
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-function loadData() {
-  const selectedValue = document.getElementById("itemSelect").value;
-  const apiUrl = `https://jsonplaceholder.typicode.com/${selectedValue}`;
+  const startCity = document.getElementById('start-city').value
+  const destinationCities = document.getElementById('destinations').value
+  const algos = document.getElementById('algos').value
 
-  fetch(apiUrl)
-    .then((response) => response.json())
-    .then((data) => displayData(data))
-    .catch((error) => console.error("Error fetching data:", error));
-}
-
-function displayData(data) {
-  const dataList = document.getElementById("dataList");
-  dataList.innerHTML = ""; // Clear previous data
-
-  data.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = JSON.stringify(item);
-    dataList.appendChild(listItem);
-  });
-}
-
-// Initial data load
-// loadData();
+  console.log(startCity)
+  console.log(destinationCities)
+  console.log(algos)
+})

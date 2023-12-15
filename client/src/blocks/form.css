@@ -1,0 +1,19 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 400px;
+  font-family: Arial, sans-serif;
+}
+
+.form__button {
+  background-color: antiquewhite;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 80px;
+  margin: auto;
+}
+
+.form__button:hover {
+  cursor: pointer;
+}

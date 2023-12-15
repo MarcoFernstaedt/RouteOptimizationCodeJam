@@ -1,6 +1,6 @@
 .sidebar {
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  height: 100%;
   background-color: red;
   position: relative;
   text-align: center;
@@ -8,12 +8,7 @@
   border-radius: 13px;
   display: inline;
   padding-top: 40px;
-}
-
-.select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: solid 1px black;
 }
 
 .data__list {

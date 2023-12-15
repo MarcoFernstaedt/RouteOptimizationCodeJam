@@ -8,12 +8,137 @@
   </head>
   <body>
     <header class="header">
-      <button class="selector-button" type="button">
-        Select a Destination
-      </button>
+      <h1 class="header__title">Route Data</h1>
     </header>
     <main class="main">
-      <h2 class="main__heading">API Data</h2>
+      <div class="sidebar">
+        <form class="form">
+
+          <label for="start-city" class="form__label">Current City</label>
+          <select id="start-city" name="startCity" multiple>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+            <option value="New York">New York</option>
+            <option value="Phoenix">Phoenix</option>
+            <option value="Philadelphia">Philadelphia</option>
+            <option value="San Antonio">San Antonio</option>
+            <option value="San Diego">San Diego</option>
+            <option value="Dallas">Dallas</option>
+            <option value="San Jose">San Jose</option>
+            <option value="Phoenix">Phoenix</option>
+            <option value="Austin">Austin</option>
+            <option value="Jacksonville">Jacksonville</option>
+            <option value="Fort Worth">Fort Worth</option>
+            <option value="Columbus">Columbus</option>
+            <option value="Indianapolis">Indianapolis</option>
+            <option value="Charlotte">Charlotte</option>
+            <option value="San Francisco">San Francisco</option>
+            <option value="Seattle">Seattle</option>
+            <option value="Denver">Denver</option>
+            <option value="Dallas">Dallas</option>
+            <option value="Washington">Washington</option>
+            <option value="Nashville">Nashville</option>
+            <option value="Oklahoma City">Oklahoma City</option>
+            <option value="El Paso">El Paso</option>
+            <option value="Boston">Boston</option>
+            <option value="Portland">Portland</option>
+            <option value="Las Vegas">Las Vegas</option>
+            <option value="Nashville">Nashville</option>
+            <option value="Detroit">Detroit</option>
+            <option value="Memphis">Memphis</option>
+            <option value="Louisville">Louisville</option>
+            <option value="Baltimore">Baltimore</option>
+            <option value="Milwaukee">Milwaukee</option>
+            <option value="Albuquerque">Albuquerque</option>
+            <option value="Tucson">Tucson</option>
+            <option value="Fresno">Fresno</option>
+            <option value="Sacramento">Sacramento</option>
+            <option value="Baltimore">Baltimore</option>
+            <option value="Kansas City">Kansas City</option>
+            <option value="Albuquerque">Albuquerque</option>
+            <option value="Tucson">Tucson</option>
+            <option value="Mesa">Mesa</option>
+            <option value="Atlanta">Atlanta</option>
+            <option value="Omaha">Omaha</option>
+            <option value="Raleigh">Raleigh</option>
+            <option value="Long Beach">Long Beach</option>
+            <option value="Virginia Beach">Virginia Beach</option>
+            <option value="Miami">Miami</option>
+            <option value="Oakland">Oakland</option>
+            <option value="Minneapolis">Minneapolis</option>
+            <option value="Tulsa">Tulsa</option>
+            <option value="Bakersfield">Bakersfield</option>
+          </select>
+
+          <label class="form__label">Destination City's (select 1 - 6)</label>
+          <select id="destinations" name="destinations" multiple>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+            <option value="New York">New York</option>
+            <option value="Phoenix">Phoenix</option>
+            <option value="Philadelphia">Philadelphia</option>
+            <option value="San Antonio">San Antonio</option>
+            <option value="San Diego">San Diego</option>
+            <option value="Dallas">Dallas</option>
+            <option value="San Jose">San Jose</option>
+            <option value="Phoenix">Phoenix</option>
+            <option value="Austin">Austin</option>
+            <option value="Jacksonville">Jacksonville</option>
+            <option value="Fort Worth">Fort Worth</option>
+            <option value="Columbus">Columbus</option>
+            <option value="Indianapolis">Indianapolis</option>
+            <option value="Charlotte">Charlotte</option>
+            <option value="San Francisco">San Francisco</option>
+            <option value="Seattle">Seattle</option>
+            <option value="Denver">Denver</option>
+            <option value="Dallas">Dallas</option>
+            <option value="Washington">Washington</option>
+            <option value="Nashville">Nashville</option>
+            <option value="Oklahoma City">Oklahoma City</option>
+            <option value="El Paso">El Paso</option>
+            <option value="Boston">Boston</option>
+            <option value="Portland">Portland</option>
+            <option value="Las Vegas">Las Vegas</option>
+            <option value="Nashville">Nashville</option>
+            <option value="Detroit">Detroit</option>
+            <option value="Memphis">Memphis</option>
+            <option value="Louisville">Louisville</option>
+            <option value="Baltimore">Baltimore</option>
+            <option value="Milwaukee">Milwaukee</option>
+            <option value="Albuquerque">Albuquerque</option>
+            <option value="Tucson">Tucson</option>
+            <option value="Fresno">Fresno</option>
+            <option value="Sacramento">Sacramento</option>
+            <option value="Baltimore">Baltimore</option>
+            <option value="Kansas City">Kansas City</option>
+            <option value="Albuquerque">Albuquerque</option>
+            <option value="Tucson">Tucson</option>
+            <option value="Mesa">Mesa</option>
+            <option value="Atlanta">Atlanta</option>
+            <option value="Omaha">Omaha</option>
+            <option value="Raleigh">Raleigh</option>
+            <option value="Long Beach">Long Beach</option>
+            <option value="Virginia Beach">Virginia Beach</option>
+            <option value="Miami">Miami</option>
+            <option value="Oakland">Oakland</option>
+            <option value="Minneapolis">Minneapolis</option>
+            <option value="Tulsa">Tulsa</option>
+            <option value="Bakersfield">Bakersfield</option>
+          </select>
+
+          <label class="form__label">Select 2 Algo's</label>
+          <select id="algos">
+            <option value="Random Hamiltonian cycle ">Random Hamiltonian cycle (baseline)</option>
+            <option value="Greedy Search">Greedy Search</option>
+            <option value="Exact Shortest Path">Exact Shortest Path (brute force)</option>
+            <option value="K-optimal Tours">K-optimal Tours</option>
+          </select>
+
+          <button class="form__button">Submit</button>
+        </form>
+      </div>
       <iframe
         class="iframe"
         src="https://www.google.com/maps?z=15&amp;daddr=48.858372,2.294481&amp;output=embed"
@@ -22,41 +147,6 @@
         marginheight="80"
         marginwidth="80"
       ></iframe>
-      <div class="sidebar" id="citySelector">
-        <div>
-          <span class="close__button" onclick="closeCitySelector()"
-            >&times;</span
-          >
-          <h2>Select Cities</h2>
-
-          <label for="homeCity">Home City:</label>
-          <select class="homecity__selector">
-            <!-- Populate with city options -->
-            <option value="city1">New York</option>
-            <option value="city2">Los Angeles</option>
-            <!-- Add more options as needed -->
-          </select>
-
-          <br />
-
-          <label for="otherCities">Other Cities (select up to 6):</label>
-          <select id="otherCities" multiple size="7">
-            <!-- Populate with city options -->
-            <option value="city3">Chicago</option>
-            <option value="city4">Houston</option>
-            <option value="city5">Phoenix</option>
-            <option value="city6">Philadelphia</option>
-            <option value="city7">San Antonio</option>
-            <!-- Add more options as needed -->
-          </select>
-
-          <br /><br />
-
-          <button class="submit__button" onclick="submitSelection()">
-            Submit
-          </button>
-        </div>
-      </div>
     </main>
     <footer class="footer">Copyright Santa's Coders</footer>
     <script src="./pages/index.js"></script>
