@@ -8,6 +8,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  font-family: Arial, sans-serif;
 }
 
 .modal-content {
@@ -22,11 +23,15 @@
 }
 .open__button {
   background-color: aliceblue;
+  border-radius: 2px;
 }
 .open__button:hover {
   cursor: pointer;
 }
 
+.homecity__selector {
+  border-radius: 8px;
+}
 .homecity__selector:hover {
   cursor: pointer;
 }
@@ -46,23 +51,10 @@
 
 .submit__button {
   background-color: antiquewhite;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .submit__button:hover {
   cursor: pointer;
-}
-
-@media screen and (max-width: 920px) {
-  .content {
-    width: 650px;
-  }
-}
-@media screen and (max-width: 630px) {
-  .content,
-  .iframe {
-    width: 282px;
-    height: 322px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }

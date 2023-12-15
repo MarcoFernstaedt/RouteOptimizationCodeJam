@@ -1,9 +1,20 @@
 .header {
-  background-color: green;
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  padding-bottom: 0;
+  height: 125px;
 }
 .selector-button {
+  border-radius: 8px;
 }
 .selector-button:hover {
   cursor: pointer;
   background-color: gray;
+}
+
+@media screen and (max-width: 630px) {
+  .header {
+    width: 282px;
+    height: 75px;
+  }
 }
