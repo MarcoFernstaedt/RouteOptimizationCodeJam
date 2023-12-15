@@ -1,6 +1,6 @@
-const router = require('express').Router();
-const submitFormController = require('../controllers/submitForm')
+const router = require("express").Router();
+const { submitFormController } = require("../controllers/submitForm");
 
-router.get('/', submitFormController)
+router.get("/", submitFormController);
 
 module.exports = router;
