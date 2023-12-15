@@ -11,9 +11,55 @@
       <button class="selector-button" type="button">
         Select a Destination
       </button>
+      <div class="modal" id="citySelector">
+        <div>
+          <span class="close__button" onclick="closeCitySelector()"
+            >&times;</span
+          >
+          <h2>Select Cities</h2>
+
+          <label for="homeCity">Home City:</label>
+          <select id="homeCity">
+            <!-- Populate with city options -->
+            <option value="city1">New York</option>
+            <option value="city2">Los Angeles</option>
+            <!-- Add more options as needed -->
+          </select>
+
+          <br />
+
+          <label for="otherCities">Other Cities (select up to 6):</label>
+          <select id="otherCities" multiple size="7">
+            <!-- Populate with city options -->
+            <option value="city3">Chicago</option>
+            <option value="city4">Houston</option>
+            <option value="city5">Phoenix</option>
+            <option value="city6">Philadelphia</option>
+            <option value="city7">San Antonio</option>
+            <!-- Add more options as needed -->
+          </select>
+
+          <br /><br />
+
+          <button onclick="submitSelection()">Submit</button>
+        </div>
+      </div>
+
+      <button class="modal__open">Open City Selector</button>
+
+      <ul id="dataList" class="data__list"></ul>
     </header>
     <main class="main">
       <div class="content">
+        <h2>API Data</h2>
+        <iframe
+          class="iframe"
+          src="https://www.google.com/maps?z=15&amp;daddr=48.858372,2.294481&amp;output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="80"
+          marginwidth="80"
+        ></iframe>
         <ul class="sidebar">
           <li>Sample 1</li>
           <li>Sample 2</li>
@@ -23,52 +69,6 @@
           <li>Sample 6</li>
           <li>Sample 7</li>
         </ul>
-        <h2>API Data</h2>
-        <iframe
-          class="iframe"
-          width="500"
-          height="400"
-          src="https://www.google.com/maps?z=15&amp;daddr=48.858372,2.294481&amp;output=embed"
-          frameborder="0"
-          scrolling="no"
-          marginheight="80"
-          marginwidth="80"
-        ></iframe>
-
-        <div class="modal" id="citySelector">
-          <div>
-            <span class="closeButton" onclick="closeCitySelector()"
-              >&times;</span
-            >
-            <h2>Select Cities</h2>
-
-            <label for="homeCity">Home City:</label>
-            <select id="homeCity">
-              <!-- Populate with city options -->
-              <option value="city1">City 1</option>
-              <option value="city2">City 2</option>
-              <!-- Add more options as needed -->
-            </select>
-
-            <br />
-
-            <label for="otherCities">Other Cities (up to 6):</label>
-            <select id="otherCities" multiple size="7">
-              <!-- Populate with city options -->
-              <option value="city3">City 3</option>
-              <option value="city4">City 4</option>
-              <!-- Add more options as needed -->
-            </select>
-
-            <br /><br />
-
-            <button onclick="submitSelection()">Submit</button>
-          </div>
-        </div>
-
-        <button onclick="openCitySelector()">Open City Selector</button>
-
-        <ul id="dataList" class="data__list"></ul>
       </div>
     </main>
     <footer class="footer">Copyright Santa's Coders</footer>
