@@ -1,4 +1,4 @@
-export class Modal {
+export default class Modal {
   constructor() {
     this.modalElement = document.getElementById("citySelector");
     this.openButton = document.getElementById("openCitySelectorButton");
