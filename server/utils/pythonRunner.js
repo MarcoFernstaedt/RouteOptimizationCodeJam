@@ -1,10 +1,9 @@
 const { spawn } = require('child_process');
-const script = require('../scripts/')
 
 // function to run python scripts
 const pythonRunner = (data) => {
     return new Promise((resolve, reject) => {
-        const pythonScriptPath = `${script}`;
+        const pythonScriptPath = '../scripts/script.py';
         
         const pythonProcess = spawn('python', [pythonScriptPath]);
     
