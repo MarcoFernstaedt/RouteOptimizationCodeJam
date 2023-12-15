@@ -1,4 +1,4 @@
-const router = requrie("express").Router();
+const router = require("express").Router();
 const submitFormRoutes = require("./submitForm");
 const { NOT_FOUND } = require("../utils/errors");
 
