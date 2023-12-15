@@ -50,7 +50,7 @@ The required libraries are contained in the route.py module, and are as follows:
 **Technologies**
 - Node.js
 - Express.js
-- Helmet (Securit Measurey)
+- Helmet (Security Measure)
 - Python
 
 ### Server Structure
