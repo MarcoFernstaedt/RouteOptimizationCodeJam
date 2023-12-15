@@ -1,4 +1,5 @@
 const express = require("express");
+const routes = require('./routes/index')
 const helmet = require("helmet");
 
 const app = express();
@@ -10,6 +11,9 @@ app.use(express.json());
 
 // security measure
 app.use(helmet());
+
+// routes
+app.use(routes)
 
 app.listen(() => {
   console.log(`Listening to port: ${PORT}`);

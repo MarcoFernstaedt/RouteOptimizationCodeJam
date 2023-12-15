@@ -9,3 +9,5 @@ router.use("/submit-form", submitFormRoutes);
 router.use("*", (req, res) => {
   res.status(NOT_FOUND).json({ message: "Requested resource not found" });
 });
+
+module.exports = router;
