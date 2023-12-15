@@ -4,6 +4,8 @@ Contributors: Marco Fernstaedt, Veronica Steele, Andrew Kwon
 ## Roles
 - **Marco Fernstaedt**
   - *Back-end Developer*
+- **Veronica Steele**
+  - *Front-end Developer*
 - **Andrew Kwon**
   - *Data Scientist*
 
