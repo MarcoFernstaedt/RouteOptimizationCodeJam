@@ -1,3 +1,4 @@
+import "../pages/index.css";
 import Modal from "../components/modal";
 
 const selectorModal = new Modal("#city-selector-form");
