@@ -89,9 +89,9 @@ The required libraries are contained in the route.py module, and are as follows:
 
 ## Scripts
 
-- index.html\*\* site structure and form
-- index.css\*\* site layout and UI
-- index.js\*\* error display handling, button functionality and api calls
+- index.html - site structure and form
+- index.css - site layout and UI
+- index.js - error display handling, button functionality and api calls
 
 ### Deployment
 
