@@ -1,10 +1,12 @@
 .footer {
-  background-color: cornsilk;
+  background-color: aliceblue;
   height: 125px;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
+.footer__copyright {
+  padding-top: 50px;
+}
 @media screen and (max-width: 630px) {
   .footer {
     width: 630px;
