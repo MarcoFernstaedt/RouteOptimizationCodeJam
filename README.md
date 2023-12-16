@@ -84,11 +84,14 @@ The required libraries are contained in the route.py module, and are as follows:
 
 ## Format
 
--\*\* uses a sidebar form to select city inputs (up to 7 accepted) and algorithms (up to 2). -** layout incorporates an iframe sourced to Google Maps for easier user navigation. -** header and footer included for visibility and user appeal.
+- uses a sidebar form to select city inputs (up to 7 accepted) and algorithms (up to 2). -\*\* layout incorporates an iframe sourced to Google Maps for easier user navigation.
+- header and footer included for visibility and user appeal.
 
 ## Scripts
 
--** index.html** site structure and form -** index.css** site layout and UI -** index.js** error display handling, button functionality and api calls
+- index.html\*\* site structure and form
+- index.css\*\* site layout and UI
+- index.js\*\* error display handling, button functionality and api calls
 
 ### Deployment
 
