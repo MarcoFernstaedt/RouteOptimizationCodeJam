@@ -5,7 +5,7 @@ const pythonRunner = (data) => {
     return new Promise((resolve, reject) => {
         const pythonScriptPath = '../scripts/script.py';
         
-        const pythonProcess = spawn('python', [pythonScriptPath]);
+        const pythonProcess = spawn('python3', [pythonScriptPath]);
     
         let dataToSend = '';
     
