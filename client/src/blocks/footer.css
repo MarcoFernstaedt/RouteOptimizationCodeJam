@@ -2,11 +2,12 @@
   background-color: cornsilk;
   height: 125px;
   text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 630px) {
   .footer {
-    width: 282px;
+    width: 630px;
     height: 75px;
     padding-top: 0;
     padding-bottom: 0;

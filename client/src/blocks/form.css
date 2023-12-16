@@ -1,9 +1,9 @@
-.form{
+.form {
   display: flex;
   flex-direction: column;
   width: 280px;
   height: 400px;
-  font-family: Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .form__button {
@@ -16,4 +16,16 @@
 
 .form__button:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+  .form {
+    width: 220px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .form {
+    width: 150px;
+    height: 300px;
+  }
 }
