@@ -8,12 +8,12 @@ document.querySelector('.form').addEventListener('submit', function (event) {
   const algos = document.getElementById('algos').value
 
   // Get the selected options
-  const distCitiesArray= Array.from(destCities.selectedOptions).map(option => option.value);
+  const destCitiesArray= Array.from(destCities.selectedOptions).map(option => option.value);
 
   // Create an object with the form data
   const formData = {
     start: startCity,
-    dist: distCitiesArray,
+    dest: destCitiesArray,
     algo: algos,
   };
 
