@@ -4,6 +4,7 @@ const pythonRunner = require('../utils/pythonRunner');
 // Controller for form submission
 module.exports.submitFormController = async (req, res) => {
     try {
+        console.log(rew.body)
         // Extract data from the request body
         const formData = req.body;
 
