@@ -7,7 +7,7 @@
 }
 
 .form__button {
-  background-color: antiquewhite;
+  background-color: white;
   cursor: pointer;
   border-radius: 15px;
   width: 80px;
@@ -16,6 +16,7 @@
 
 .form__button:hover {
   cursor: pointer;
+  background-color: rgb(238, 234, 234);
 }
 @media screen and (max-width: 1000px) {
   .form {
