@@ -2,10 +2,18 @@ import sys
 import json
 from route import Locations, Route
 
-args = sys.argv[1]
-args = eval(args)
-json_data = json.dumps(args)
+args = sys.argv[1:]
 
+if len(args) == 1:
+    args = args.split(',')
+
+home = args[0].strip()
+algo = args.pop().strip()
+city_list = []
+for i in range(1, len(args)):
+    city_list.append(args[i].strip())
+
+'''
 try:
     data = json.loads(json_data)
     home = data["start"]
@@ -14,6 +22,7 @@ try:
 
 except:
     print('Error: Invalid JSON format. Make sure JSON keys and values are wrapped in single quotes')
+'''
 
 cities = Locations('datasets\cities_final.csv')
 edges, weights, coords = cities.create_map(home, city_list)
