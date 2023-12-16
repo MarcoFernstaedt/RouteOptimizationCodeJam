@@ -33,7 +33,8 @@ if algo == 'Random':
 elif algo == 'Greedy':
     rte, dist, calc_time = route.get_greedy_rte()
 elif algo == 'Hueristic':
-    rte, dist, calc_time = route.get_2opt_rte()
+    rand_rte, dist, calc_time = route.get_random_rte()
+    rte, dist, calc_time = route.get_2opt_rte(rand_rte)
 else:
     rte, dist, calc_time = route.get_exact_rte()
 
