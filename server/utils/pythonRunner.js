@@ -5,8 +5,10 @@ const { spawn } = require("child_process");
 const pythonRunner = (data) => {
   return new Promise((resolve, reject) => {
     // Assuming your Node.js script is in the same directory as the 'scripts' folder
-    const scriptPath= path.resolve(__dirname, "../scripts/script.py");
-    console.log(data);
+    const scriptPath = path.resolve(__dirname, "../scripts/script.py");
+    
+    console.log(data[1])
+    
     const pythonProcess = spawn("python3", [scriptPath, data]);
 
     let dataToSend = "";
