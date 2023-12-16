@@ -1,5 +1,5 @@
 const express = require("express");
-const routes = require("./routes/");
+const routes = require("./routes/index");
 const helmet = require("helmet");
 
 const app = express();
@@ -15,6 +15,6 @@ app.use(helmet());
 // routes
 app.use("/", routes);
 
-app.listen(() => {
+app.listen(PORT, () => {
   console.log(`Listening to port: ${PORT}`);
 });
