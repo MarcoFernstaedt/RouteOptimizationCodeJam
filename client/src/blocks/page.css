@@ -1,11 +1,11 @@
 .main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
-  padding: 0 30px;
+  /* padding: 0 30px; */
   background-color: green;
-  font-family: Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
 }
 
@@ -22,7 +22,12 @@
   padding-top: 80px;
   justify-content: center;
 }
-
+@media screen and (max-width: 1000px) {
+  .iframe {
+    height: 300px;
+    width: 400px;
+  }
+}
 @media screen and (max-width: 630px) {
   .main {
     width: 600px;
