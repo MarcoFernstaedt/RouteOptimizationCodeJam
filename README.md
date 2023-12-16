@@ -92,6 +92,7 @@ My roll on the client side consist of a variety of task.
 - implimented JavaScript into the form.
 - implimented html structure
 - setup webpack and babel
+- implimented data render to frontend.
 
 ## Veronica Steele: Front-End Engineer
 
@@ -108,9 +109,8 @@ My roll on the client side consist of a variety of task.
 
 ### Deployment
 
-This project will be deployed on AWS upon completion.
-still in progress
-
+We had some troule deploying on AWS
+so for now follow the instructions
 
 ### Set up Instructrions
 
