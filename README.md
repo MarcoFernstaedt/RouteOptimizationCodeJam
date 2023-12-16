@@ -99,3 +99,9 @@ still in progress
 - [LinkedIn - Marco Fernstaedt](https://www.linkedin.com/in/marco-f-19a372219?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtABxipo9S0iGUo9Hp968eA%3D%3D)
 - [GitHub - Andrew Kwon](https://github.com/adkwn1)
 - [LinkedIn - Andrew Kwon](https://www.linkedin.com/in/andrew-kwon-913849261/)
+{
+  'start': 'Chicago',
+  'dest': ['Tucson', 'San Jose'],
+  'algo': 'Greedy'
+}
+<pre>SyntaxError: Unexpected token { in JSON at position 1<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (C:\Users\Owner\Desktop\projects\RouteOptimizationCodeJam\server\node_modules\body-parser\lib\types\json.js:89:19)<br> &nbsp; &nbsp;at C:\Users\Owner\Desktop\projects\RouteOptimizationCodeJam\server\node_modules\body-parser\lib\read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:203:9)<br> &nbsp; &nbsp;at invokeCallback (C:\Users\Owner\Desktop\projects\RouteOptimizationCodeJam\server\node_modules\raw-body\index.js:231:16)<br> &nbsp; &nbsp;at done (C:\Users\Owner\Desktop\projects\RouteOptimizationCodeJam\server\node_modules\raw-body\index.js:220:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (C:\Users\Owner\Desktop\projects\RouteOptimizationCodeJam\server\node_modules\raw-body\index.js:280:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:517:28)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1368:12)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</pre>
