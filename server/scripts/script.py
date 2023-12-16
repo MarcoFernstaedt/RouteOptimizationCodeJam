@@ -5,7 +5,7 @@ from route import Locations, Route
 args = sys.argv[1:]
 
 if len(args) == 1:
-    args = args.split(',')
+    args = args[0].split(',')
 
 home = args[0].strip()
 algo = args.pop().strip()
