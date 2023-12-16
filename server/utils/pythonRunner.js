@@ -4,13 +4,13 @@ const { spawn } = require('child_process');
 const pythonRunner = (data) => {
     return new Promise((resolve, reject) => {
         const pythonScriptPath = '../scripts/script.py';
-        
-        const pythonProcess = spawn('python3', [pythonScriptPath]);
+        console.log(data)
+        const pythonProcess = spawn('python3', [pythonScriptPath, data]);
     
         let dataToSend = '';
     
         pythonProcess.stdout.on('data', (data) => {
-          result += data.toString();
+          dataToSend  += data.toString();
         });
     
         pythonProcess.stderr.on('data', (data) => {
@@ -19,7 +19,7 @@ const pythonRunner = (data) => {
     
         pythonProcess.on('exit', (code) => {
           if (code === 0) {
-            resolve(JSON.parse(result));
+            resolve(JSON.parse(dataToSend ));
           } else {
             reject(`Python script exited with code ${code}`);
           }
