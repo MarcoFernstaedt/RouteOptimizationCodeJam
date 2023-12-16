@@ -14,6 +14,7 @@ module.exports.submitFormController = async (req, res) => {
         // Handle the result as needed
         res.json({ result: pythonResult });
     } catch (error) {
+        console.log(error)
         res.status(error.statusCode || SERVER_ERROR).json({ error: error.message || 'Internal Server Error' });
     }
 };

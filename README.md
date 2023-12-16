@@ -3,7 +3,7 @@ Contributors: Marco Fernstaedt, Veronica Steele, Andrew Kwon
 
 ## Roles
 - **Marco Fernstaedt**
-  - *Back-end Developer*
+  - *Software Engineer*
 - **Veronica Steele**
   - *Front-end Developer*
 - **Andrew Kwon**
@@ -44,7 +44,7 @@ The required libraries are contained in the route.py module, and are as follows:
 - sys
 - json
 
-## Marco Fernstaedt: Back-End Engineer
+## Marco Fernstaedt: Software Engineer
 
 ### Server
 **Technologies**
@@ -67,8 +67,31 @@ The required libraries are contained in the route.py module, and are as follows:
 ### Controller
 - **submitForm.js**: Controller for the `/submit-form` route. Extracts user data and passes it to Python scripts. Python scripts return cities, distance, and algorithm runtime.
 
+## Client
+My roll on the client side consist of a variety of task.
+**Task**
+
+- implimented form elements.
+- created layout for header/main/sidebar/iframe
+- created fetch request
+- implimented JavaScript into the form.
+
 ### Deployment
 This project will be deployed on AWS upon completion.
+still in progress
+
+
+### Set up Instructrions
+
+1. download repository onto your machine.
+2. open the repo in a Code Editor (VSCode)
+3. opem the terminal (if in VSCode Ctrl + j)
+4. move into server directory command: cd client
+5. run npm install
+6. change directory to server using: cd ../server
+7. inisiate server: npm run dev
+8. open a second terminal to run the client (if VSCode Ctrl + Shift + 5)
+9. enter the terminal with a mouse click and run: npm run dev
 
 ### Connect with Us
 
