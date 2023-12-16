@@ -10,7 +10,7 @@
     <header class="header">
       <h1 class="header__title">Route Data</h1>
     </header>
-    <main class="main">
+    <div class="main">
       <div class="sidebar">
         <form class="form">
           <label for="start-city" class="form__label">Current City</label>
@@ -140,13 +140,21 @@
       </div>
       <iframe
         class="iframe"
-        src="https://www.google.com/maps?z=15&amp;daddr=48.858372,2.294481&amp;output=embed"
+        src="https://www.google.com/maps?z=15&amp;daddr=40.714,-74.007&amp;output=embed"
         frameborder="0"
         scrolling="no"
         marginheight="80"
         marginwidth="80"
       ></iframe>
-    </main>
+    </div>
+    <section class="data">
+      <h3>Your Best Route</h3>
+      <ul class="list">
+        <li class="list__item">Route: <span class="list__span" id="route"></span></li>
+        <li class="list__item">runtime: <span id="runtime"></span></li>
+        <li class="list__item">Nautical miles: <span id="distance"></span></li>
+      </ul>
+    </section>
     <footer class="footer">
       <div class="footer__copyright">Copyright Santa's Coders</div>
     </footer>

@@ -1,5 +1,12 @@
 import "../pages/index.css";
 
+const renderData = (data) => {
+  let routes = document.getElementById('route').textContent = data['result']['route']
+  let runtime = document.getElementById('runtime').textContent = data['result']['runtime']
+  let distance = document.getElementById('distance').textContent = data['result']['distance']
+  console.log(distance)
+}
+
 document.querySelector('.form').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the default form submission
 
@@ -27,7 +34,7 @@ document.querySelector('.form').addEventListener('submit', function (event) {
   .then(response => response.json())
   .then(data => {
     console.log('Response from server:', data);
-    // Handle the response as needed
+    renderData(data)
   })
   .catch(error => {
     console.error('Error:', error);

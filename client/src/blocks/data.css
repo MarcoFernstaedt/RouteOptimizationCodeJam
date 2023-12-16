@@ -1,0 +1,24 @@
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: royalblue;
+    border: 2px solid black;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    font-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list__item {
+    margin: 5px 0;
+}
+
+.list__span {
+    mergin-right: auto;
+}
