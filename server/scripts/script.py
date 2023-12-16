@@ -2,14 +2,18 @@ import sys
 import json
 from route import Locations, Route
 
+args = sys.argv[1]
+args = eval(args)
+json_data = json.dumps(args)
+
 try:
-    data = json.loads(sys.argv[1])
+    data = json.loads(json_data)
     home = data["start"]
     city_list = data["dest"]
     algo = data["algo"]
 
 except:
-    print('Error: Invalid JSON format. Probably missing an escape character for \" \"')
+    print('Error: Invalid JSON format. Make sure JSON keys and values are wrapped in single quotes')
 
 cities = Locations('datasets\cities_final.csv')
 edges, weights, coords = cities.create_map(home, city_list)
