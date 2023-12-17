@@ -114,15 +114,19 @@ so for now follow the instructions
 
 ### Set up Instructrions
 
+Before starting the setup process you must first install both Node.js and Python3
+
 1. download repository onto your machine.
 2. open the repo in a Code Editor (VSCode)
 3. opem the terminal (if in VSCode Ctrl + j)
-4. move into server directory command: cd client
-5. run npm install
-6. change directory to server using: cd ../server
-7. inisiate server: npm run dev
-8. open a second terminal to run the client (if VSCode Ctrl + Shift + 5)
-9. enter the terminal with a mouse click and run: npm run dev
+4. move into server directory command: cd server
+5. run: python3 -m pip install pandas
+6. run: python3 -m pip install pandas
+7. run npm install
+8. change directory to server using: cd ../server
+9. inisiate server: npm run dev
+10. open a second terminal to run the client (if VSCode Ctrl + Shift + 5)
+11. enter the terminal with a mouse click and run: npm run dev
 
 ### Connect with Us
 
